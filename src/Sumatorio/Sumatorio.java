@@ -1,21 +1,35 @@
 package Sumatorio;
 
-
-
 /**
  *
  * @Liz FP
  */
-public class Sumatorio extends Thread {
+public class Sumatorio extends Thread { //lo metemos en un hilo porque es critico (Thread)
 
- 
+    private double numero;
+    private double resultado;
+
+    public double getResultado() {
+        return resultado;
+    }
+
+    public Sumatorio(int numero) {
+        this.numero = numero;
+    }
+
+    public double calImpar() {
+        if (numero % 2 == 0) {
+            numero = numero - 1;
+        }
+        double total = 0;
+        for (double i = numero; i >= 1; i = i - 2) {
+            total += i;
+        }
+        return total;
+    }
 
     @Override
-    public void run() {//metodo principal de cualquier hilo.(lo que quiero que haga el hilo)
-       double acumulador = 0.0;
-       for(int i =1; i<=numero;i++){
-           acumulador +=1;
-       }
-       Principal.sumatorio(acumulador);
+    public void run() {
+        this.resultado = calImpar();
     }
 }
