@@ -35,7 +35,7 @@ public class ObjetoCompartido {
 
         /**
          * cuando se despierte, volvemos a establecer la diponibilidad a cierto,
-         * establecemos el calor generado por el porductor y notificamos a todos
+         * establecemos el calor generado por el productor y notificamos a todos
          * los consumidores de la disponibildad
          */
         this.valor = val;

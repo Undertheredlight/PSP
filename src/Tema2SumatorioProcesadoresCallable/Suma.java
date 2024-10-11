@@ -1,5 +1,5 @@
 //implementa el Callable
-package Tema2SumatorioProcesadores;
+package Tema2SumatorioProcesadoresCallable;
 
 import java.util.concurrent.Callable;
 

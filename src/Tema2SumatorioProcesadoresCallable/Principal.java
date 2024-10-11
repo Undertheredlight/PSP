@@ -1,4 +1,4 @@
-package Tema2SumatorioProcesadores;
+package Tema2SumatorioProcesadoresCallable;
 
 import java.util.ArrayList;
 import java.util.concurrent.*;
