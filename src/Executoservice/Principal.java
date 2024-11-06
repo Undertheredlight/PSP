@@ -19,7 +19,7 @@ public class Principal {
         //Declaro e instancio el ExecutorService
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-        //Preparo una coleccion de objetos Callables que harán cad auno una cosa
+        //Preparo una coleccion de objetos Callables que harán cada uno una cosa
         Set<Callable<String>> callables = new HashSet<Callable<String>>();
 
         //hacemos un hasmap de callables
@@ -45,7 +45,7 @@ public class Principal {
         //declaro la lista de objetos Future y utilizo el método de llamar a todos
         java.util.List<Future<String>> futures = executorService.invokeAll(callables);
 
-        //recojo las soluciones de cad auno de los objetos Future
+        //recojo las soluciones de cada uno de los objetos Future
         for (Future<String> future : futures) {
             System.out.println("future.get = " + future.get());
         }
